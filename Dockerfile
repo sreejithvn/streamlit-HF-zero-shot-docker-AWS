@@ -13,7 +13,7 @@ RUN apt-get update && apt-get install -y \
     git \
     && rm -rf /var/lib/apt/lists/*
 
-
+COPY . . 
 RUN git clone git@github.com:sreejithvn/streamlit-HF-zero-shot-docker-aws.git .
 COPY copy_to_docker/ .    
 # To copy your app code (.streamlit) files (if in same directory as Dockerfile) from where it lives on our server(pc) to the container
